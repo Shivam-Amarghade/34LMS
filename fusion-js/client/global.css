@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme for iEvolve LMS
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 11% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 11% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 15%;
+
+    /* Primary: Deep Blue (iEvolve Brand) */
+    --primary: 210 80% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light Gray */
+    --secondary: 210 14% 93%;
+    --secondary-foreground: 210 11% 15%;
+
+    /* Accent: Vibrant Blue */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success: Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning: Amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 11% 15%;
+
+    /* Muted: Soft Gray */
+    --muted: 210 14% 93%;
+    --muted-foreground: 210 12% 50%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 14% 89%;
+    --input: 210 14% 93%;
+    --ring: 210 80% 35%;
+
+    --radius: 0.625rem;
+
+    /* Sidebar */
+    --sidebar-background: 210 11% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 80% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 15% 25%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 210 11% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 15% 20%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 15% 20%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 11% 15%;
+
+    --secondary: 210 15% 25%;
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 11% 15%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 11% 15%;
+
+    --muted: 210 15% 25%;
+    --muted-foreground: 210 12% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 25%;
+    --input: 210 15% 25%;
+    --ring: 199 89% 48%;
+
+    --sidebar-background: 210 11% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 210 11% 15%;
+    --sidebar-accent: 210 80% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
